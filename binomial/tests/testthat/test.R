@@ -2,7 +2,6 @@ library(testthat)
 
 # Context for checkers:
 context("checkers")
-source("../../R/private.R")
 
 
 test_that("test check_prob", {
@@ -26,7 +25,7 @@ test_that("test check_success", {
 
 # Context for summary measures:
 context("summary measures")
-source("../../R/private.R")
+
 
 test_that("test aux_mean", {
         expect_equal(aux_mean(5,0.5), 2.5)
@@ -61,7 +60,7 @@ test_that("test aux_kurtosis", {
 
 # Context for binomial:
 context("binomial")
-source("../../R/binomial.R")
+
 
 test_that("test bin_choose", {
         expect_equal(bin_choose(5,3), 10)

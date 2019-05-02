@@ -1,20 +1,3 @@
----
-output:
-  github_document:
-    html_preview: false
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
-
-
 ## Overview
 
 `"binomial"` is a  package that implements functions for
@@ -24,8 +7,7 @@ probability distribution, the expected value, variance, etc.
 
 ## Motivation
 
-This package has been developed to illustrate some of the concepts
-behind the creation of an R package.
+As the Workout3 assignment, this package has been developed to familiarize myself with the creation of an R package.
 
 
 ## Installation

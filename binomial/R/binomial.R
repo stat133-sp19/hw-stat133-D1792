@@ -73,15 +73,14 @@ bin_distribution = function(trials, prob){
         bindis[i,1] = i-1
         bindis[i,2] = bin_probability(success=i-1, trials=trials, prob=prob)
         }
-        class(bindis) = c("data.frame", "bindis")
+        class(bindis) = c("bindis","data.frame")
         return(bindis)
 }
 
 # Function plot.bindis()
 #' @export
 plot.bindis = function(x, ...){
-        plot = barplot(x$probability,  names.arg = x$success, xlab="successes", ylab="probability")
-        return(plot)
+        barplot(x$probability,  names.arg = x$success, xlab="successes", ylab="probability")
 }
 
 
@@ -103,15 +102,14 @@ bin_cumulative = function(trials, prob){
         bincum = bindis
         bincum$cumulative = cumsum(bincum$probability)
 
-        class(bincum) = c("data.frame", "bincum")
+        class(bincum) = c("bincum","data.frame")
         return(bincum)
 }
 
 # Function plot.bincum()
 #' @export
 plot.bincum = function(x, ...){
-        plot = plot(x$success,x$cumulative,ylab="probability",xlab="successes",lines(x$success,x$cumulative))
-        return(plot)
+        plot(x$success,x$cumulative,ylab="probability",xlab="successes",lines(x$success,x$cumulative))
 }
 
 ## 1.7) Function bin_variable()
